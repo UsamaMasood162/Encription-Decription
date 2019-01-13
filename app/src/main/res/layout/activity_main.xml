@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--<EditText-->
+        <!--android:id="@+id/inputtext"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="Entet text to Encript"-->
+         <!--/>-->
+
+    <!--<EditText-->
+        <!--android:id="@+id/password"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/inputtext"-->
+        <!--android:hint="Enter Encrypt Password" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/outputtext"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/password" />-->
+
+    <!--<Button-->
+        <!--android:id="@+id/encbtn"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/outputtext"-->
+        <!--android:text="Encrypt"/>-->
+
+    <!--<Button-->
+        <!--android:id="@+id/decbtn"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/encbtn"-->
+        <!--android:text="decrypt"/>-->
+    <RelativeLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recipient"
+            android:layout_below="@+id/linearLayout1"
+            tools:ignore="NotSibling" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/recNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:inputType="phone"
+        android:layout_below="@+id/textView1"
+        tools:ignore="NotSibling">
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="16-Character Secret Key:"
+        android:layout_below="@+id/recNum"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/secretKey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:inputType="textPassword"
+        android:layout_below="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Message:"
+        android:layout_below="@+id/secretKey"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/msgContent"
+        android:layout_width="match_parent"
+        android:layout_height="208dp"
+        android:layout_weight="0.37"
+        android:inputType="textMultiLine"
+        android:layout_below="@+id/textView3"/>
+        android:inputType="textMultiLine" />
+
+
+    <Button
+        android:id="@+id/Send"
+        android:layout_width="187dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/msgContent"
+        android:layout_marginTop="-13dp"
+        android:paddingLeft="4dp"
+        android:text="Send" />
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/msgContent"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-13dp"
+        android:text="Cancel" />
+
+</RelativeLayout>
+
+
